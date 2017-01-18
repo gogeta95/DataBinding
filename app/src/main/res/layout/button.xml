@@ -1,0 +1,19 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.saurabh.databinding.User" />
+
+        <variable
+            name="handler"
+            type="com.example.saurabh.databinding.MyHandlers" />
+    </data>
+
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view) -> handler.onGoClick(view,user)}"
+        android:text="@{user.btnText}" />
+</layout>

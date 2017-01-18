@@ -1,0 +1,18 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.example.saurabh.databinding.MyHandlers" />
+
+        <variable
+            name="user"
+            type="com.example.saurabh.databinding.User" />
+    </data>
+
+    <CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onCheckedChanged="@{(view,isChecked) -> handler.checkbox(view,user,isChecked)}" />
+</layout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data class=".MainActivityBinding">
 
@@ -42,15 +43,14 @@
             android:text="@{User.btnText}"
             android:visibility="@{User.b?View.VISIBLE :View.INVISIBLE}" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{(view) -> handler.onGoClick(view,User)}"
-            android:text="@{User.btnText}" />
+        <include
+            layout="@layout/button"
+            bind:handler="@{handler}"
+            bind:user="@{User}" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onCheckedChanged="@{(view,isChecked) -> handler.checkbox(view,User,isChecked)}" />
+        <include
+            layout="@layout/checkbox"
+            bind:handler="@{handler}"
+            bind:user="@{User}" />
     </LinearLayout>
 </layout>
