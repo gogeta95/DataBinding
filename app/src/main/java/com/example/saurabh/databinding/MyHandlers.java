@@ -18,4 +18,8 @@ public class MyHandlers {
     public void onGoClick(View view, User user) {
         Toast.makeText(view.getContext(), user.toString(), Toast.LENGTH_SHORT).show();
     }
+
+    public void checkbox(View view, User user, boolean isChecked) {
+        Toast.makeText(view.getContext(), user + " : " + isChecked, Toast.LENGTH_SHORT).show();
+    }
 }
