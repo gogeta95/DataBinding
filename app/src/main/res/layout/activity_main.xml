@@ -10,6 +10,8 @@
         <variable
             name="handler"
             type="com.example.saurabh.databinding.MyHandlers" />
+
+        <import type="android.view.View" />
     </data>
 
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
@@ -37,7 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{handler::onClickFriend}"
-            android:text="@{User.btnText}" />
+            android:text="@{User.btnText}"
+            android:visibility="@{User.b?View.VISIBLE :View.INVISIBLE}" />
 
         <Button
             android:layout_width="wrap_content"

@@ -5,6 +5,7 @@ package com.example.saurabh.databinding;
  */
 
 public class User {
+    boolean b;
     private String firstName;
     private String lastName;
     private String btnText;
@@ -14,6 +15,15 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.btnText = btnText;
+        b = true;
+    }
+
+    public boolean isB() {
+        return b;
+    }
+
+    public void setB(boolean b) {
+        this.b = b;
     }
 
     public String getFirstName() {
@@ -34,6 +44,7 @@ public class User {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", btnText='" + btnText + '\'' +
+                ", b=" + b +
                 '}';
     }
 }

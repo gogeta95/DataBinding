@@ -21,5 +21,6 @@ public class MyHandlers {
 
     public void checkbox(View view, User user, boolean isChecked) {
         Toast.makeText(view.getContext(), user + " : " + isChecked, Toast.LENGTH_SHORT).show();
+        user.setB(isChecked);
     }
 }
